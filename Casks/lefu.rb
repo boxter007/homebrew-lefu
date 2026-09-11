@@ -13,9 +13,17 @@ cask "lefu" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "乐府.app"
+
+  caveats <<~EOS
+    乐府当前使用 ad-hoc 签名，首次启动会被 Gatekeeper 拦下。放行方式任选其一：
+      · 在「访达 → 应用程序」中右键点乐府，选择「打开」并确认；
+      · 或在终端执行：xattr -cr "/Applications/乐府.app"
+
+    首次使用需安装 BlackHole 虚拟声卡，乐府内可一键安装。
+  EOS
 
   zap trash: [
     "~/Library/Application Support/com.jingjing.lefu",
