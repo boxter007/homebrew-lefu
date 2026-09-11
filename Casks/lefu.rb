@@ -1,6 +1,6 @@
 cask "lefu" do
-  version "1.0.0"
-  sha256 "ac80d53d7f9a7dea662ce367e014b74b39a4837098449b134a9b53a5388413a5"
+  version "1.0.1"
+  sha256 "653087645bd9ef4164287a4e2f7c3e47d9626472eb8082732794ce52c5e0ac1c"
 
   url "https://github.com/boxter007/lefu/releases/download/v#{version}/Lefu-v#{version}.zip",
       verified: "github.com/boxter007/lefu/"
